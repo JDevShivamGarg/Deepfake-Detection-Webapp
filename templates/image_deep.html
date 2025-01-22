@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image - Deepfake Detection</title>
+    <style>
+        /* Add your styling here */
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Upload Image</h1>
+        <input type="file" id="image-upload" accept="image/*">
+        <button id="check-deepfake-btn">Check Deepfake</button>
+        <div id="deepfake-result"></div>
+    </div>
+
+    <script>
+        document.getElementById('check-deepfake-btn').addEventListener('click', async function() {
+            const fileInput = document.getElementById('image-upload');
+            if (fileInput.files.length === 0) {
+                alert('Please upload an image first.');
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('http://localhost:5000/detect', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const data = await response.json();
+                const resultDiv = document.getElementById('deepfake-result');
+                
+                if (data.label === 'Deepfake') {
+                    resultDiv.innerHTML = 'Deepfake detected';
+                    resultDiv.className = 'deepfake';
+                } else {
+                    resultDiv.innerHTML = 'Not a Deepfake';
+                    resultDiv.className = 'not-deepfake';
+                }
+
+                resultDiv.style.display = 'block';
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
