@@ -1,11 +1,11 @@
 # Deepfake-Detection-Webapp
 
-#INSTALLATION
-Download the required libaries
-Download the repository
-Download the img folder and model file from google drive
-Place the img folder inside the static folder and model file inside static/models
-Run main.py
+## INSTALLATION
+- Download the required libaries
+- Download the repository
+- Download the img folder and model file from google drive
+- Place the img folder inside the static folder and model file inside static/models
+- Run main.py
 
 # WORKING
 
