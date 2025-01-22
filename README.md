@@ -2,7 +2,7 @@
 
 ## INSTALLATION
 - Download the required libaries
-- Download the repository manually or clone using : 'git clone https://github.com/GeekProgramer/Study-Sagey.git'
+- Download the repository manually or clone using : `gh repo clone JDevShivamGarg/Deepfake-Detection-Webapp`
 - Download the img folder and model file from google drive
 - Place the img folder inside the static folder and model file inside static/models
 - Run main.py
@@ -13,5 +13,5 @@
 
 
 ## LINKS
--Model file : <a href="https://drive.google.com/file/d/1FmFqh6xgWJJAzCvyVGcPAnHI-sw3F0G-/view?usp=sharing">Link</a>
--img folder : <a href="https://drive.google.com/drive/folders/1DXkgVpsQ3ZHW-Rx2oEl7IDsIGjFxm4LE?usp=sharing">Link</a>
+- Model file : <a href="https://drive.google.com/file/d/1FmFqh6xgWJJAzCvyVGcPAnHI-sw3F0G-/view?usp=sharing">Link</a>
+- img folder : <a href="https://drive.google.com/drive/folders/1DXkgVpsQ3ZHW-Rx2oEl7IDsIGjFxm4LE?usp=sharing">Link</a>
